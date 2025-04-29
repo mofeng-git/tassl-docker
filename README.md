@@ -2,6 +2,9 @@
 
 本项目提供了一个 Docker 镜像，其中包含配置了 TASSL (基于 OpenSSL 1.1.1s) 以支持国密 (GM) SSL 协议的 Nginx。这使得您可以轻松地部署支持国密标准的 Web 服务器或反向代理。
 
+![image](https://github.com/user-attachments/assets/351b14cd-6be3-4fd9-9f78-749a0198cd2b)
+
+
 ## 背景
 
 国密 SSL 协议（TLCP）在中国用于保障网络通信安全。本项目利用了 [TASSL](https://github.com/jntass/TASSL-1.1.1) 库和定制化的 [Nginx](https://github.com/jntass/Nginx_Tassl) 来提供国密支持。
