@@ -18,7 +18,10 @@ RUN apt-get update && apt-get install -y \
 
 # 编译和安装Nginx
 RUN cd /root/Nginx_Tassl \
-    && ./configure --with-http_ssl_module --with-stream --with-stream_ssl_module --with-openssl=/root/TASSL-1.1.1 --prefix=/usr/local/nginx \
+    && ./configure --with-http_ssl_module --with-stream --with-stream_ssl_module  \
+        --with-http_auth_request_module --with-http_v2_module \
+        --with-http_dav_module --with-openssl=/root/TASSL-1.1.1 \
+        --prefix=/usr/local/nginx \
     && make -j$(nproc) \
     && make install
 
